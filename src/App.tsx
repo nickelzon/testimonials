@@ -3,8 +3,8 @@ import Testimonials from "./Components/Testimonials";
 
 const App = () => {
   return (
-    <div className="h-full w-full bg-orange-500">
-      <div className="main-container -2 flex h-[100vh] items-center justify-center border-2 border-black">
+    <div className="h-full w-full bg-slate-100">
+      <div className="main-container flex justify-center p-10">
         <Testimonials />
       </div>
     </div>

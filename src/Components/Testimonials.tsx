@@ -20,14 +20,24 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap border-2 border-black">
-      {data.map((data: any) => (
-        <h3
-          key={data.id}
-          className="max-w-xs rounded-lg bg-white p-1 text-center"
+    <div className={`flex max-w-4xl flex-col sm:grid sm:grid-cols-2 sm:gap-9`}>
+      {data.map((element: any, index: number) => (
+        <div
+          key={element.id}
+          className={`max-w-sm bg-white p-6 ${
+            index !== data.length - 1 ? "mb-9 sm:mb-0" : "mb-0"
+          } rounded-xl font-Jakarta`}
         >
-          {data.message}
-        </h3>
+          <div className="mb-6 flex items-center text-base font-bold">
+            <img
+              src={element.avatar}
+              alt={element.id}
+              className="mr-4 max-h-10 rounded-full"
+            />
+            {element.name}
+          </div>
+          <span className=" italic">"{element.message}"</span>
+        </div>
       ))}
     </div>
   );
