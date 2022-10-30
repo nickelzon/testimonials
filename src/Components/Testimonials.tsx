@@ -10,9 +10,13 @@ const Testimonials = () => {
   const [data, setData]: any = useState([]);
 
   const getTestimonials = async () => {
-    const result: any = await fetch(url, settings).then((res) => res.json());
-    setData(result);
-    console.log(result);
+    try {
+      const result: any = await fetch(url, settings).then((res) => res.json());
+      setData(result);
+      console.log(result);
+    } catch {
+      console.log("JSON API null");
+    }
   };
 
   useEffect(() => {
