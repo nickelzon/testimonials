@@ -6,3 +6,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rest:hover {
+  animation: pulsecolor 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulsecolor {
+  0% {
+    color: #191919;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: #191919;
+  }
+}
