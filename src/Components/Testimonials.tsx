@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
+export const url: string = "https://testimonialapi.toolcarton.com/api";
+
 const Testimonials = () => {
-  const url: string = "https://testimonialapi.toolcarton.com/api";
   const settings: any = {
     method: "GET",
     redirect: "follow",
