@@ -24,6 +24,14 @@ const Testimonials = () => {
     getTestimonials();
   }, []);
 
+  if (data.length === 0) {
+    return (
+      <div className="progress-container">
+        <div className="article-progress"></div>
+      </div>
+    );
+  }
+
   return (
     <div className={`flex max-w-4xl flex-col sm:grid sm:grid-cols-2 sm:gap-9`}>
       {data.map((element: any, index: number) => (
